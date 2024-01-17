@@ -36,7 +36,7 @@ div form input[type='submit']
     position: relative;
     margin: 0.4rem;
 }
-form input[type="passowrd"]
+form input[type='passowrd']
 {
     margin: 0.5rem;
     outline: none;

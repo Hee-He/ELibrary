@@ -14,12 +14,13 @@
             session_start();
             if (isset($_SESSION['username'])) {
                 echo '<input type="hidden" name="username" value="' . htmlspecialchars($_SESSION['username']) . '">';
+                echo '<label for="password">Password:</label><br>';
+                echo '<input type="password" name="password" placeholder="Password" value="" required>';
+                echo '<input type="submit" name="login" value="Login">';
             }
         ?>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" name="login" value="Login">
+        
     </form>
 </body>
 </html>
