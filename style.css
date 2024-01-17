@@ -1,0 +1,47 @@
+div
+{
+    height: fit-content;
+    border: 0.1rem solid black;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    background-color: antiquewhite;
+    border-radius: 0.6rem;
+}
+div p
+{
+    margin: 0.5rem;
+    height: fit-content;
+}
+div form input[type='text']
+{
+    margin: 0.5rem;
+    outline: none;
+    width:10rem;
+    position: relative;
+    border-radius: 0.2rem;
+    height: 3rem;
+}
+input[type="text"]::placeholder
+{
+    color: aqua;
+}
+div form input[type='submit']
+{
+    width:10rem;
+    height: 4rem;
+    position: relative;
+    margin: 0.4rem;
+}
+form input[type="passowrd"]
+{
+    margin: 0.5rem;
+    outline: none;
+    width:10rem;
+    position: relative;
+    border-radius: 0.2rem;
+    height: 3rem;
+}
