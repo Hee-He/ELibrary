@@ -1,4 +1,4 @@
-div
+.loginform
 {
     height: fit-content;
     border: 0.1rem solid black;
@@ -11,12 +11,12 @@ div
     background-color: antiquewhite;
     border-radius: 0.6rem;
 }
-div p
+.loginform p
 {
     margin: 0.5rem;
     height: fit-content;
 }
-div form input[type='text']
+.loginform form input[type='text']
 {
     margin: 0.5rem;
     outline: none;
@@ -29,19 +29,10 @@ input[type="text"]::placeholder
 {
     color: aqua;
 }
-div form input[type='submit']
+.loginform form input[type='submit']
 {
     width:10rem;
     height: 4rem;
     position: relative;
     margin: 0.4rem;
-}
-form input[type='passowrd']
-{
-    margin: 0.5rem;
-    outline: none;
-    width:10rem;
-    position: relative;
-    border-radius: 0.2rem;
-    height: 3rem;
 }

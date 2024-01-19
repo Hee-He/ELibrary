@@ -33,7 +33,6 @@ if (isset($_POST['login'])) {
         exit(); // Ensure no further code execution after the redirection
     } else {
         // Login failed, redirect back to login form
-        
         header("Location: login_form.php");
         exit(); // Ensure no further code execution after the redirection
     }

@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+<div id="Form">
     <form action="login_process.php" method="post">
         <?php
             // Check if the username is set in the session
@@ -15,12 +6,37 @@
             if (isset($_SESSION['username'])) {
                 echo '<input type="hidden" name="username" value="' . htmlspecialchars($_SESSION['username']) . '">';
                 echo '<label for="password">Password:</label><br>';
-                echo '<input type="password" name="password" placeholder="Password" value="" required>';
+                echo '<input type="password" name="password" placeholder="Password" value="" required><br>';
                 echo '<input type="submit" name="login" value="Login">';
             }
-        ?>
-
-        
+        ?>        
     </form>
-</body>
-</html>
+</div>
+<style>
+    #Form
+    {
+        height: fit-content;
+        border: 0.1rem solid black;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        background-color: antiquewhite;
+        border-radius: 0.6rem;
+    }
+    input[type="passowrd"]
+    {
+        margin: 0.5rem;
+        outline: none;
+        width:10rem;
+        position: relative;
+        border-radius: 0.2rem;
+        height: 3rem;
+    }
+    input[type="password"]::placeholder
+    {
+        color: aqua;
+    }
+</style>
