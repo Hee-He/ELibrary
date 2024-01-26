@@ -1,0 +1,150 @@
+.nav-bar {
+    margin: 0.5rem;
+    position: absolute;
+    overflow: hidden; /* Add this line to hide overflow */
+}
+
+.container {
+    position: relative;
+    left: -100%;
+    /* overflow: hidden; */
+    background-color: black;
+    color: aliceblue;
+    width: 200px;
+    height: 300px;
+    transition: left 0.5s ease-in-out; /* Add transition property for smooth animation */
+}
+
+.icon {
+    background-color: aqua;
+    height: 1.5rem;
+    width: 1.4rem;
+    border-radius: 0.2rem;
+}
+
+i {
+    position: absolute;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+i.fa-xmark {
+    display: none;
+}
+
+.menubar {
+    background: rgba(0,0,0,0.5);
+    margin: 0.5rem 0.01rem;
+}
+.menubar li
+{
+    position: relative;
+    list-style: none;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.menubar li:before
+{
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    left: -100%;
+    transition: .5s;
+    background: aqua;
+}
+
+.menubar li:hover:before
+{
+    left: 100%;
+}
+
+.menubar li a
+{
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    color: transparent;
+    cursor: pointer;
+}
+
+.menubar li a:before,
+.menubar li a:after
+ {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+    box-sizing: border-box;
+    transition: .5s;
+    transition-delay: .25s;
+}
+
+.menubar li a:before
+{
+    -webkit-clip-path: polygon(0 0, 100% 3%, 100% 50%, 0 50%);
+    clip-path: polygon(0 0, 100% 3%, 100% 50%, 0 50%);
+}
+
+.menubar li a:hover:before
+{
+    color: #f00;
+    transform: translate(10px,-2px);
+}
+
+.menubar li a:after 
+{
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.menubar li a:hover:after
+{
+    color: #f00;
+    transform: translate(-10px,2px);
+}
+#category {
+    position: relative; /* Ensure the parent is positioned */
+  }
+
+
+
+.hover-menu {
+    background-color: blueviolet;
+    transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease, left 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    height: 100px;
+    left: 100%; /* Initial position, adjust as needed */
+  }
+  
+  #category:hover .hover-menu {
+    opacity: 1;
+    visibility: visible;
+    height: 150px; /* Adjust the desired height on hover */
+    left: 50px; /* Adjust the desired left position on hover */
+  }
+  
+.hover-menu {
+    visibility: hidden;
+  }
+  
+  #category:hover .hover-menu {
+    display: block;
+    visibility: visible;
+  }
+  
+  .vertical-nav .hover-menu li a {
+    color: darkcyan;
+  }
