@@ -1,4 +1,9 @@
-<div id="Form">
+<title>Registeration Form</title>
+<link rel="stylesheet" href="style.css?v=2">
+
+
+
+<div class="loginform">
     <form action="login_process.php" method="post">
         <?php
             // Check if the username is set in the session
@@ -12,7 +17,8 @@
         ?>        
     </form>
 </div>
-<style>
+
+<!-- <style>
     #Form
     {
         height: fit-content;
@@ -39,4 +45,4 @@
     {
         color: aqua;
     }
-</style>
+</style> -->

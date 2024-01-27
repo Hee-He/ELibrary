@@ -10,10 +10,7 @@
 <body>
 <div class="nav-bar">
     <!-- <button onclick="shownav()">asdasdad</button> -->
-    <div class="icon">
-        <i title="menu" class="fas fa-bars" onclick="toggleNav(event)"></i>
-        <i title="close" class="fas fa-xmark" onclick="toggleNav(event)"></i>
-    </div>
+    
     <div class="container">
         <ul class="menubar">
             <li><a href="" data-text="Add Books" >Add Books</a></li>
@@ -23,17 +20,56 @@
                 <li class="menu-item item--b"><a href="authors.php" class="item--b">Authors</a></li>
                 <li class="menu-item item--b"><a href="semester.php" class="item--c">Semester</a></li>
             </ul>
-            <!-- <select name="" id="" class="category-dropdown">
-                <option class="cate" value="" hidden selected disabled><a href="" data-text="Category">Category</a></option>
-                <option value=""><a href=""></a></option>
-                <option value=""><a href=""></a></option>
-                <option value=""><a href=""></a></option>
-            </select></li> -->
             <li><a href="" data-text="Issued Books">Issued Books</a></li>
             <li><a href="students.php" data-text="Students">Students</a></li>
             <li><a href=""></a></li>
         </ul>
     </div>
+</div>
+<div class="menu-container">
+    <div class="icon">
+        <i title="menu" class="fas fa-bars" onclick="toggleNav(event)"></i>
+        <i title="close" class="fas fa-xmark" onclick="toggleNav(event)"></i>
+    </div>
+  <ul class="vertical-nav">
+    <li>
+      <a href="#"><i data-feather="activity"></i>Add Books</a>
+    </li>
+    <li>
+      <a href="#"><i data-feather="box"></i></a>
+      <div class="hover-menu">
+        <ul>
+          <li><a href="#">Menu Item</a></li>
+          <li><a href="#">Menu Item</a></li>
+          <li><a href="#">Menu Item</a></li>
+          <li class="menu-header">OTHER</li>
+          <li><a href="#">Menu Item</a></li>
+          <li><a href="#">Menu Item</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a href="#"><i data-feather="cloud"></i></a>
+      
+    </li>
+    <li>
+      <a href="#"><i data-feather="database"></i></a>
+      
+    </li>
+    <li>
+      <a href="#"><i data-feather="inbox"></i></a>
+      
+    </li>
+    <li>
+      <a href="#"><i data-feather="package"></i></a>
+      
+    </li>
+    <li>
+      <a href="#"><i data-feather="user"></i></a>
+      
+    </li>
+    
+  </ul>
 </div>
 </body>
 <script src="assets/js/script.js"></script>

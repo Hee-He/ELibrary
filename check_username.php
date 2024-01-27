@@ -16,7 +16,7 @@ function checkUsername($username) {
     $stmt->execute();
     $result_students = $stmt->get_result();
 
-    $stmt = $conn->prepare("SELECT * FROM admin WHERE fullname = ?");
+    $stmt = $conn->prepare("SELECT * FROM admintable WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result_admin = $stmt->get_result();
@@ -47,7 +47,7 @@ if (isset($_POST['continue'])) {
     } elseif($result ==-1)
     {
         $_SESSION['username'] = $username;
-        header('admin/dashboard.php');
+        header('Location: admin/adminlogin.php');
     }
     else
     {

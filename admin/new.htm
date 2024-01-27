@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Text Change</title>
+</head>
+<body>
+<p id="textchange"></p>
+<input type="text" id="myInput" placeholder="Type something...">
+
+<script>
+    // Get the input element
+    var myInput = document.getElementById("myInput");
+
+    // Add an event listener for the input event
+    myInput.addEventListener("input", function() {
+        // This function will be called whenever the text in the input changes
+        var inputValue = myInput.value;
+        var para = document.getElementById('textchange');
+        console.log("Input value changed to: " + inputValue);
+        para.innerHTML = inputValue;
+        // You can perform additional actions or validations here
+    });
+</script>
+
+</body>
+</html>

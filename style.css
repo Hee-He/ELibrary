@@ -9,30 +9,82 @@
     left: 40%;
     top: 35%;
     background-color: antiquewhite;
-    border-radius: 0.6rem;
+    border-radius: 0  0.6rem 0 0.6rem;
 }
 .loginform p
 {
     margin: 0.5rem;
     height: fit-content;
 }
-.loginform form input[type='text']
+.loginform form input[type='text'],[type='password'],[type='email']
 {
     margin: 0.5rem;
     outline: none;
-    width:10rem;
+    width: 20rem;
     position: relative;
     border-radius: 0.2rem;
-    height: 3rem;
+    height: 2.5rem;
 }
-input[type="text"]::placeholder
+.loginform form input[type="checkbox"] 
 {
-    color: aqua;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #279dc5;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
 }
-.loginform form input[type='submit']
+.loginform form a
 {
-    width:10rem;
-    height: 4rem;
+    cursor: pointer;
+    color: brown;
+}
+/* #showpassword
+{
+    display: none;
+} */
+.loginform form input[type='checkbox']:checked
+{
+    background-color: red;
+    height: 1rem;
+}
+input[type="text"],[type='password'],[type='email']::placeholder
+{
+    color: #279dc5;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+.loginform form input[type='submit'] {
     position: relative;
-    margin: 0.4rem;
+    overflow: hidden;
+    width: 10rem;
+    height: 3.5rem;
+    margin: 0.1rem 5rem;
+    cursor: pointer;
+    background-color: #279dc5;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5rem;
+}
+
+.loginform form input[type='submit']::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid aqua;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: transform 0.3s ease; /* Add a smooth transition for rotation effect */
+    border-radius: 5rem; /* Set the border-radius for the pseudo-element */
+}
+
+.loginform form input[type='submit']:hover::before {
+    transform: rotate(360deg); /* Rotate in a clockwise direction */
+    border: 0.2rem solid aqua;
 }
