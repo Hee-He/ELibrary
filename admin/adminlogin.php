@@ -12,7 +12,7 @@
         echo '<input type="email" name="email" id="email" placeholder="E-mail" value="" required>';
         echo '<a onclick="code()">send</a><br>';
         echo '<label for="password">Verification Code:</label><br>';
-        echo '<input type="text" name="code" id="verificationCode" minlength="8" maxlength="8" required autocomplete="off" placeholder="Verification Code"><br>';
+        echo '<input type="text" name="code" id="verificationCode" minlength="6" maxlength="6" required autocomplete="off" placeholder="Verification Code"><br>';
         echo '<p id="error"></p><br>';
         echo '<input type="submit" name="login" value="Login">';
     }
@@ -25,7 +25,7 @@
         // This function will be called whenever the text in the input changes
         var inputValue = myInput.value;
         var para = document.getElementById('error');
-        if(inputValue.length < 8) {
+        if(inputValue.length < 6) {
             para.innerHTML = "Code too short";
             para.style.color = "red";
         } else{
