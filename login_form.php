@@ -17,32 +17,3 @@
         ?>        
     </form>
 </div>
-
-<!-- <style>
-    #Form
-    {
-        height: fit-content;
-        border: 0.1rem solid black;
-        width: fit-content;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 40%;
-        top: 35%;
-        background-color: antiquewhite;
-        border-radius: 0.6rem;
-    }
-    input[type="passowrd"]
-    {
-        margin: 0.5rem;
-        outline: none;
-        width:10rem;
-        position: relative;
-        border-radius: 0.2rem;
-        height: 3rem;
-    }
-    input[type="password"]::placeholder
-    {
-        color: aqua;
-    }
-</style> -->

@@ -1,4 +1,9 @@
-.notification {
+body 
+{
+    overflow: hidden; /* Prevent scrolling when .editOrDelete is displayed */
+}
+.notification 
+{
     display: none;
     position: fixed;
     background-color: #4CAF50;
@@ -17,3 +22,32 @@ table tr td
     height: 2rem;
     width: 7rem;
 }
+.editOrDelete
+{
+    display: none;
+    height: 500px;
+    width: 600px;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+.editOrDelete:focus body
+{
+    filter: blur(0.5rem);
+}
+.editOrDelete form input
+{
+    height: 2rem;
+}
+.editOrDelete form #close
+{
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: rotate(45deg);
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+}
+

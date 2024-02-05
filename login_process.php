@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
     if ($row && password_verify($password, $row['password'])) {
         // Login successful, redirect to dashboard
         $_SESSION['username'] = $username;
-        header("Location: dash.php");
+        header("Location: users/dash.php");
         exit(); // Ensure no further code execution after the redirection
     } else {
         // Login failed, redirect back to login form
