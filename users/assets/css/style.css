@@ -1,3 +1,7 @@
+ul
+{
+  list-style: none;
+}
 /* Style for the dropdown */
 .dropdown {
     position: relative;
@@ -56,10 +60,66 @@
   .container
   {
     position: relative;
-    display: none;
+    left: 50%;
+    top: 40%;
+    display: none; /*Initially hide the books*/
 
   }
-  .container .books
-  {
-    position: absolute;
-  }
+  .container .books {
+    position: absolute; /* Adjust position as needed */
+}
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Style the custom checkbox container */
+.checkbox-container {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style the custom checkbox */
+.checkbox-container:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc; /* Border color */
+  background-color: #fff; /* Background color */
+  border-radius: 3px; /* Rounded corners */
+}
+
+/* Change border color on hover */
+.checkbox-container:hover:before {
+  border-color: #999;
+}
+
+/* Change background color when checked */
+input[type="checkbox"]:checked + .checkbox-container:before {
+  background-color: red; /* Change to desired color */
+}
+
+/* Style the checkmark icon (hidden by default) */
+.checkbox-container:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark icon when the checkbox is checked */
+input[type="checkbox"]:checked + .checkbox-container:after {
+  display: block;
+}

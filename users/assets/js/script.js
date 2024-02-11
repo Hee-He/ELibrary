@@ -17,11 +17,20 @@ function Sure() {
     }
 }
 
+var table = document.getElementById("issued");
 function Showtable() 
 {
-  var table = document.getElementById("issued");
   table.style.display = "block";
+  document.querySelector(".container").style.display = "none";;
 }
+
+
+function booklist()
+{
+    document.querySelector(".container").style.display = "block";;
+    table.style.display = "none";
+}
+
 function toggleDropdown() {
 var dropdownContent = document.getElementById("myDropdown");
 dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
@@ -39,8 +48,22 @@ if (!event.target.matches('.dropdown-btn')) {
   }
 }
 }
-function booklist()
-{
-    var book = document.querySelector(".container");
-    book.style.display = "block";
-}
+
+$(document).ready(function() {
+  $('#dropdown').change(function() {
+      var selectedOption = $(this).val();
+      if (selectedOption !== "") {
+          $.ajax({
+              url: 'booklst.php',
+              type: 'POST',
+              data: { option: selectedOption },
+              success: function(response) {
+                  $('#output').html(response);
+              },
+              error: function(xhr, status, error) {
+                  console.error(xhr.responseText);
+              }
+          });
+      }
+  });
+});
